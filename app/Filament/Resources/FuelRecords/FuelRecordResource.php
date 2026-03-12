@@ -5,6 +5,7 @@ namespace App\Filament\Resources\FuelRecords;
 use App\Filament\Resources\FuelRecords\Pages\CreateFuelRecord;
 use App\Filament\Resources\FuelRecords\Pages\EditFuelRecord;
 use App\Filament\Resources\FuelRecords\Pages\ListFuelRecords;
+use App\Filament\Resources\FuelRecords\Pages\DatabaseConnections;
 use App\Filament\Resources\FuelRecords\Schemas\FuelRecordForm;
 use App\Filament\Resources\FuelRecords\Tables\FuelRecordsTable;
 use App\Models\FuelRecord;
@@ -45,6 +46,7 @@ class FuelRecordResource extends Resource
             'index' => ListFuelRecords::route('/'),
             'create' => CreateFuelRecord::route('/create'),
             'edit' => EditFuelRecord::route('/{record}/edit'),
+            'connections' => DatabaseConnections::route('/connections'),
         ];
     }
 }
