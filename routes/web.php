@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FuelRecordController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MachineController;
 use App\Http\Controllers\MaintenanceController;
 use App\Http\Controllers\OperatorController;

@@ -2,14 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class WorkLog extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'machine_id',
         'operator_id',
@@ -21,13 +18,13 @@ class WorkLog extends Model
         'activity',
     ];
 
-    protected $casts = [
-        'started_at' => 'datetime',
-        'ended_at' => 'datetime',
-        'start_hour_meter' => 'decimal:2',
-        'end_hour_meter' => 'decimal:2',
-        'hours_worked' => 'decimal:2',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'started_at' => 'datetime',
+            'ended_at'   => 'datetime',
+        ];
+    }
 
     public function machine(): BelongsTo
     {
