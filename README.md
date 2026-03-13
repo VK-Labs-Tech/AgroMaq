@@ -1,73 +1,59 @@
-# AgroMaq - Gestao de Maquinas Agricolas
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Sistema web completo em Laravel para acompanhar uso da frota agricola com foco em:
-- horas trabalhadas
-- operador responsavel
-- consumo de combustivel
-- manutencao preventiva e corretiva
-- alertas de manutencao
-- historico de servicos
-- custo operacional por maquina
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Stack
-- PHP 8.2+
-- Laravel 12 (2026)
-- SQLite (padrao para desenvolvimento)
-- Blade + Tailwind CSS 4
+## About Laravel
 
-## Modulos implementados
-- Dashboard com indicadores da frota e alertas de manutencao
-- Cadastro completo de maquinas
-- Cadastro de operadores
-- Registro de horas trabalhadas por maquina e operador
-- Registro de abastecimentos com calculo automatico de custo
-- Manutencoes com status, vencimento e historico
-- Relatorio de custo operacional por maquina com filtro por periodo
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Regras de negocio
-- Horas trabalhadas calculadas automaticamente (horimetro)
-- Custo de abastecimento calculado automaticamente (litros x preco/litro)
-- Horimetro da maquina atualizado automaticamente por uso/abastecimento/manutencao
-- Manutencao vencida identificada por data e por horimetro limite
-- Custo operacional por maquina = combustivel + manutencao
-- Custo por hora = custo operacional / horas trabalhadas
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Como executar
-1. Instale dependencias:
-   - composer install
-2. Configure ambiente:
-   - copy .env.example .env
-   - php artisan key:generate
-3. Rode banco e seed:
-   - php artisan migrate:fresh --seed
-4. Gere os assets frontend (obrigatorio para nao ocorrer erro de manifest):
-   - npm install
-   - npm run build
-5. Inicie servidor:
-   - php artisan serve
-6. Acesse:
-   - http://127.0.0.1:8000
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Dados de exemplo
-O seeder AgroMaqSeeder cria:
-- 4 maquinas
-- 3 operadores
-- sessoes de trabalho
-- abastecimentos
-- manutencoes (incluindo vencidas e concluidas)
+## Learning Laravel
 
-## Rotas principais
-- / (dashboard)
-- /machines
-- /operators
-- /work-logs
-- /fuel-records
-- /maintenances
-- /reports/operational-costs
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
 
-## Estrutura
-- app/Models: entidades do dominio
-- app/Http/Controllers: logica de CRUD e relatorios
-- database/migrations: esquema de banco
-- database/seeders: dados de exemplo
-- resources/views: interface completa do sistema
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## Laravel Sponsors
+
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
