@@ -9,6 +9,10 @@ Route::get('/', function () {
 });
 
 Route::prefix('admin')->name('admin.')->group(function (): void {
+    Route::get('/', function () {
+        return redirect()->route('admin.diario-bordo.index');
+    })->name('home');
+
     Route::prefix('diario-bordo')->name('diario-bordo.')->group(function (): void {
         Route::get('/', [DiarioBordoController::class, 'index'])->name('index');
         Route::get('/novo', [DiarioBordoController::class, 'create'])->name('create');

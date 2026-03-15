@@ -10,6 +10,8 @@ class DiarioBordoPreViagem extends Model
 {
     use HasFactory;
 
+    protected $table = 'diario_bordo_pre_viagens';
+
     protected $fillable = [
         'diario_bordo_id',
         'carga_descricao',
