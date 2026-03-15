@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'diario_bordo' => [
+        'webhook_url' => env('DIARIO_BORDO_WEBHOOK_URL'),
+    ],
+
 ];
